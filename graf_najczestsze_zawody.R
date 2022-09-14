@@ -30,9 +30,9 @@ roses <- roses %>%
   arrange(-sum) %>%
   filter(sum > 20)
 
-inna_kolejnoœæ <- roses$zawody[22:1]
+inna_kolejnosc <- roses$zawody[22:1]
 
-roses$zawody <- factor(roses$zawody, levels = inna_kolejnoœæ)
+roses$zawody <- factor(roses$zawody, levels = inna_kolejnosc)
 
 
 graf1 <- ggplot(roses, aes(x = sum, y = zawody, fill = ratio)) +
@@ -43,9 +43,9 @@ graf1 <- ggplot(roses, aes(x = sum, y = zawody, fill = ratio)) +
     high = "#86cbed",
     midpoint = 50
   ) +
-  labs(fill = "% ch³opców",
-       x = "Iloœæ",
+  labs(fill = "% chlopcÃ³w",
+       x = "Ilosc",
        y = "Zawody",
-       title = "Najczêœciej wybierane zawody")
+       title = "Najczesciej wybierane zawody")
 
 graf1
